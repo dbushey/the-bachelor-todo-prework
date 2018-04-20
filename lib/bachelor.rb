@@ -52,6 +52,6 @@ def get_average_age_for_season(data, season)
     end
   end
   arr_age
-  binding.pry
+  #binding.pry
   arr_age.inject{ |sum, el| sum + el } / arr_age.size
 end
