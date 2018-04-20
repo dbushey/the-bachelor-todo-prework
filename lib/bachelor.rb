@@ -44,18 +44,12 @@ end
 
 def get_average_age_for_season(data, season)
   arr_age = []
-  # age_sum = 0
-  # num_participants = 0
   data.each do |show, all_array|
     if show == season
       all_array.each do |participant_hash|
         arr_age << participant_hash["age"].to_i
-        # age_sum += (participant_hash["age"]).to_i
-        # num_participants += 1
       end
     end
   end
-  #(age_sum / num_participants.to_f).round(0)
-  #binding.pry
   (arr_age.inject{ |sum, el| sum + el } / arr_age.size.to_f).round(0)
 end
